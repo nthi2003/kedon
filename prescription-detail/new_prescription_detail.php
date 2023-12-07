@@ -38,65 +38,66 @@ function check($id)
   </header>
   <div class="content">
     <h2>Kê đơn</h2>
-    <!-- <div class="new-patient-button">
-      <a href="./prescription/new_prescription.php">Kê đơn</a>
-    </div> -->
-    <form action="../unitTest.php" method="post" class="form">
-      <input type="hidden" name="prescription_detail" value="1">
-      <div class="f">
-        <label for="name">Bệnh nhân:</label>
-        <?php
-        $sql = 'SELECT pat.TenBenhNhan AS patientName FROM donthuoc AS pre JOIN benhnhan as pat ON pre.BenhNhanId = pat.BenhNhanId WHERE pre.DonThuocId =  ' . $_GET["prescriptionId"] . '';
-        $result = $conn->query($sql);
 
-        if ($result) {
-          while ($row = $result->fetch_assoc()) {
-            echo '<input type="text" class="form-input" name="name" value="' . $row['patientName'] . '" placeholder="Tên">';
-          }
-        } else {
-          die('Error: ' . mysqli_error($conn));
-        }
-        ?>
-      </div>
-      <div class="f">
-        <label for="prescriptionId">Đơn thuốc số:</label>
-        <input type="text" class="form-input" name="prescriptionId" value="<?php echo $_GET['prescriptionId']; ?>">
-      </div>
-      <div class="f">
-        <label>Chọn thuốc</label>
-        <?php
-        $sql = 'SELECT thuocId, tenThuoc FROM thuoc';
-        $result = $conn->query($sql);
-        if ($result) {
-          echo '<select class="form-input" name="medicine" >';
-          echo '<option value="0">Chọn thuốc</option>';
-          while ($row = $result->fetch_assoc()) {
-            echo '<option value="' . $row['thuocId'] . '">' . $row['tenThuoc'] . '</option>';
-          }
+    <div style="margin-left: 180px;">
+      <form action="../unitTest.php" method="post" class="form">
+        <input type="hidden" name="prescription_detail" value="1">
+        <div class="f">
+          <label for="name">Bệnh nhân:</label>
+          <?php
+          $sql = 'SELECT pat.TenBenhNhan AS patientName FROM donthuoc AS pre JOIN benhnhan as pat ON pre.BenhNhanId = pat.BenhNhanId WHERE pre.DonThuocId =  ' . $_GET["prescriptionId"] . '';
+          $result = $conn->query($sql);
 
-          echo '</select>';
-        } else {
-          die('Error: ' . mysqli_error($conn));
-        }
-        ?>
-      </div>
-      <div class="f">
-        <label for="dose_only">Liều dùng 1 lần</label>
-        <input type="text" class="form-input" name="dose_only" placeholder="ví dụ: 2 viên">
-      </div>
-      <div class="f">
-        <label>Số lần dùng trong ngày</label>
-        <select class="form-input" name="dose_day">
-          <option value="2">2/buổi (sáng / tối)</option>
-          <option value="3">3/buổi (sáng / trưa / tối)</option>
-        </select>
-      </div>
-      <div class="f">
-        <label for="frequency">Số ngày uống</label>
-        <input type="text" class="form-input" name="frequency" placeholder="ví dụ: 3 ngày">
-      </div>
-      <button type="submit" class="button-form">Lưu thông tin</button>
-    </form>
+          if ($result) {
+            while ($row = $result->fetch_assoc()) {
+              echo '<input type="text" class="form-input" name="name" value="' . $row['patientName'] . '" placeholder="Tên">';
+            }
+          } else {
+            die('Error: ' . mysqli_error($conn));
+          }
+          ?>
+        </div>
+        <div class="f">
+          <label for="prescriptionId">Đơn thuốc số:</label>
+          <input type="text" class="form-input" name="prescriptionId" value="<?php echo $_GET['prescriptionId']; ?>">
+        </div>
+        <div class="f">
+          <label>Chọn thuốc</label>
+          <?php
+          $sql = 'SELECT thuocId, tenThuoc FROM thuoc';
+          $result = $conn->query($sql);
+          if ($result) {
+            echo '<select class="form-input" name="medicine" >';
+            echo '<option value="0">Chọn thuốc</option>';
+            while ($row = $result->fetch_assoc()) {
+              echo '<option value="' . $row['thuocId'] . '">' . $row['tenThuoc'] . '</option>';
+            }
+
+            echo '</select>';
+          } else {
+            die('Error: ' . mysqli_error($conn));
+          }
+          ?>
+        </div>
+        <div class="f">
+          <label for="dose_only">Liều dùng 1 lần</label>
+          <input type="text" class="form-input" name="dose_only" placeholder="ví dụ: 2 viên">
+        </div>
+        <div class="f">
+          <label>Số lần dùng trong ngày</label>
+          <select class="form-input" name="dose_day">
+            <option value="2">2/buổi (sáng / tối)</option>
+            <option value="3">3/buổi (sáng / trưa / tối)</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="frequency">Số ngày uống</label>
+          <input type="text" class="form-input" name="frequency" placeholder="ví dụ: 3 ngày">
+        </div>
+        <button style="margin-right: 800px;" type="submit" class="button-form">Lưu thông tin</button>
+      </form>
+
+    </div>
   </div>
 
 </body>

@@ -23,10 +23,7 @@ require_once '../connection/connect.php';
       <a href="../medicine/index.php">Thông tin thuốc</a>
       <a href="../prescription-detail/index.php">Thông tin kê đơn</a>
     </div>
-    <div class="nav-right-content">
-      <div>Xin chào</div>
-      <img src="../img/expand_more.svg" alt="menu">
-    </div>
+
   </nav>
   <div class="new-patient-form">
     <h2 style="text-align: center;">THÊM BỆNH NHÂN</h2>

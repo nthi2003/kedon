@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kê đơn thuốc</title>
   <link rel="stylesheet" href="./style_light.css">
+  <link rel="stylesheet" href="">
 </head>
 
 <body>
@@ -18,10 +19,6 @@
       <a href="./patient/new_patient.php">Thêm bệnh nhân</a>
       <a href="./medicine/index.php">Thông tin thuốc</a>
       <a href="./prescription-detail/index.php">Thông tin kê đơn</a>
-    </div>
-    <div class="nav-right-content">
-      <div>Xin chào</div>
-      <img src="./img/expand_more.svg" alt="menu">
     </div>
   </nav>
   <div class="content">

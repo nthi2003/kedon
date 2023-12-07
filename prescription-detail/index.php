@@ -19,10 +19,7 @@
       <a href="../medicine/index.php">Thông tin thuốc</a>
       <a href="./index.php" style="background-color: gray;">Thông tin kê đơn</a>
     </div>
-    <div class="nav-right-content">
-      <div>Xin chào</div>
-      <img src="../img/expand_more.svg" alt="menu">
-    </div>
+
   </nav>
   <div class="content">
     <h2>Thông tin kê thuốc</h2>

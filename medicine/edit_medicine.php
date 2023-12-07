@@ -75,9 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['medicineId'])) {
       <button type="submit" class="button-form">Cập nhật thông tin</button>
     </form>
   </div>
-  <footer>
-    Design by: Nguyễn Đình Hưng
-  </footer>
 </body>
 
 </html>

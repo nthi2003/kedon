@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 07, 2023 lúc 02:41 PM
+-- Thời gian đã tạo: Th12 07, 2023 lúc 05:58 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -39,9 +39,7 @@ CREATE TABLE `bacsi` (
 --
 
 INSERT INTO `bacsi` (`BacSiId`, `TenBS`, `email`, `phone`) VALUES
-(1, 'Lê Phú Khoa', 'khoa@gmail.com', '0135666451'),
-(2, 'Nguyễn Đình Thiên Quý', 'quy@gmail.com', '012346789'),
-(4, 'Trần Minh Thiện', 'thien@gmail.com', '0500500055');
+(1, 'Nguyễn Văn Quốc Thi', 'quocthi,dev@gmail.com', '0922134131');
 
 -- --------------------------------------------------------
 
@@ -61,10 +59,6 @@ CREATE TABLE `benhnhan` (
 --
 
 INSERT INTO `benhnhan` (`BenhNhanId`, `TenBenhNhan`, `gioitinh`, `phone`) VALUES
-(2, 'Nguyễn Văn Lâm vlog', 'nu', '0123456789'),
-(3, 'Nguyễn Chánh Hoàng', 'Gay', '0130139111'),
-(4, 'Nguyễn Quốc Huy', 'Nữ', '0364561314'),
-(5, 'Nguyễn Đức Vinh', 'Gay', '0791341141'),
 (6, 'thi2', 'nam', '0904543956');
 
 -- --------------------------------------------------------
@@ -96,13 +90,6 @@ CREATE TABLE `donthuoc` (
   `NgayKetThuc` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Đang đổ dữ liệu cho bảng `donthuoc`
---
-
-INSERT INTO `donthuoc` (`DonThuocId`, `BacSiId`, `BenhNhanId`, `NgayBatdau`, `NgayKetThuc`) VALUES
-(2, 1, 2, '2023-11-22 09:45:00', '2023-11-24 09:45:00');
-
 -- --------------------------------------------------------
 
 --
@@ -123,7 +110,7 @@ CREATE TABLE `thuoc` (
 --
 
 INSERT INTO `thuoc` (`thuocId`, `tenThuoc`, `lieuToiThieu`, `LieuToiDa`, `TanXuat`, `Donvi`) VALUES
-(4, 'thuoc ho', 2, 10, 3, 1);
+(4, 'thuoc ho', 2, 10, 1, 100);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -177,25 +164,25 @@ ALTER TABLE `bacsi`
 -- AUTO_INCREMENT cho bảng `benhnhan`
 --
 ALTER TABLE `benhnhan`
-  MODIFY `BenhNhanId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `BenhNhanId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `chitietdonthuoc`
 --
 ALTER TABLE `chitietdonthuoc`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `donthuoc`
 --
 ALTER TABLE `donthuoc`
-  MODIFY `DonThuocId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `DonThuocId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `thuoc`
 --
 ALTER TABLE `thuoc`
-  MODIFY `thuocId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;	
+  MODIFY `thuocId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

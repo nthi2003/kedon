@@ -5,7 +5,7 @@ function checkDose($conn, $medicine, $dose_only, $dose_day, $day)
 {
     $sql_medicine = "SELECT * FROM thuoc where thuocId = $medicine";
     $result = $conn->query($sql_medicine);
-    
+
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $doseMin = $row['lieuToiThieu'];
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dose_day = $_POST['dose_day'];
         $day = $_POST['frequency'];
 
-        $dosageIsValid = checkDose($conn, $medicine, $  , $dose_day, $day);
+        $dosageIsValid = checkDose($conn, $medicine, $dose_only, $dose_day, $day);
 
         if ($dosageIsValid) {
             $sql = "INSERT INTO chitietdonthuoc (DonThuocId, thuocId, doseOnly, doseDay, tinhthuongxuyen) VALUES ('$prescription_id', '$medicine', '$dose_only', '$dose_day', '$day')";
@@ -62,4 +62,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-?>
