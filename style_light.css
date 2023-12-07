@@ -1,0 +1,592 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px;
+  }
+  
+  header a {
+    color: #ecf0f1;
+  }
+  
+  nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+  }
+  
+  .nav-left-content {
+    display: flex;
+  }
+  
+  .nav-left-content a {
+    text-align: center;
+    padding: 10px 130px;
+    margin: 0 ;
+    color: #ecf0f1;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-left-content a:hover {
+    background-color: #233140;
+  }
+  
+  .content {
+    min-height: 300px;
+    text-align: center;
+  }
+  
+  .content table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .new-patient-button {
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .new-patient-button a {
+    padding: 10px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .new-patient-button a:hover {
+    background-color: #219d54;
+  }
+  
+  tr {
+    height: 40px;
+  }
+  
+  .th {
+    border-bottom: 2px solid #3498db;
+    color: #3498db;
+  }
+  
+  .td {
+    border-bottom: 1px solid #bdc3c7;
+  }
+  
+  
+  
+  
+  .f{
+    width: 50%;
+    margin-bottom: 15px;
+    margin-left: 350px;
+  
+  }
+  
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .button-form {
+    width: 10%;
+    padding: 10px;
+    margin: 20px 650px;
+    background-color: #315e8f;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-form:hover {
+    background-color: #04bada;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .td a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .td a:hover {
+    color: #0056b3;
+  }
+  
+  
+  .searchForm {
+    margin-bottom: 20px;
+  }
+  
+  
+  .searchForm {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  .searchForm form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchBox-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .searchBox-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  
+  .searchBox-button:hover {
+    background-color: #0056b3;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px;
+  }
+  
+  header a {
+    color: #ecf0f1;
+  }
+  
+  nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+  }
+  
+  .nav-left-content {
+    display: flex;
+  }
+  
+  .nav-left-content a {
+    text-align: center;
+    padding: 10px 130px;
+    margin: 0 ;
+    color: #ecf0f1;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-left-content a:hover {
+    background-color: #233140;
+  }
+  
+  .content {
+    min-height: 300px;
+    text-align: center;
+  }
+  
+  .content table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .new-patient-button {
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .new-patient-button a {
+    padding: 10px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .new-patient-button a:hover {
+    background-color: #219d54;
+  }
+  
+  tr {
+    height: 40px;
+  }
+  
+  .th {
+    border-bottom: 2px solid #3498db;
+    color: #3498db;
+  }
+  
+  .td {
+    border-bottom: 1px solid #bdc3c7;
+  }
+  
+  
+  
+  
+  .f{
+    width: 50%;
+    margin-bottom: 15px;
+    margin-left: 350px;
+  
+  }
+  
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .button-form {
+    width: 10%;
+    padding: 10px;
+    margin: 20px 650px;
+    background-color: #315e8f;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-form:hover {
+    background-color: #04bada;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .td a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .td a:hover {
+    color: #0056b3;
+  }
+  
+  
+  .searchForm {
+    margin-bottom: 20px;
+  }
+  
+  
+  .searchForm {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  .searchForm form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchBox-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .searchBox-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  
+  .searchBox-button:hover {
+    background-color: #0056b3;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px;
+  }
+  
+  header a {
+    color: #ecf0f1;
+  }
+  
+  nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+  }
+  
+  .nav-left-content {
+    display: flex;
+  }
+  
+  .nav-left-content a {
+    text-align: center;
+    padding: 10px 130px;
+    margin: 0 ;
+    color: #ecf0f1;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-left-content a:hover {
+    background-color: #233140;
+  }
+  
+  .content {
+    min-height: 300px;
+    text-align: center;
+  }
+  
+  .content table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .new-patient-button {
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .new-patient-button a {
+    padding: 10px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .new-patient-button a:hover {
+    background-color: #219d54;
+  }
+  
+  tr {
+    height: 40px;
+  }
+  
+  .th {
+    border-bottom: 2px solid #3498db;
+    color: #3498db;
+  }
+  
+  .td {
+    border-bottom: 1px solid #bdc3c7;
+  }
+  
+  
+  
+  
+  .f{
+    width: 50%;
+    margin-bottom: 15px;
+    margin-left: 350px;
+  
+  }
+  
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .button-form {
+    width: 10%;
+    padding: 10px;
+    margin: 20px 650px;
+    background-color: #315e8f;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-form:hover {
+    background-color: #04bada;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .td a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .td a:hover {
+    color: #0056b3;
+  }
+  
+  
+  .searchForm {
+    margin-bottom: 20px;
+  }
+  
+  
+  .searchForm {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  .searchForm form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchBox-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .searchBox-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  
+  .searchBox-button:hover {
+    background-color: #0056b3;
+  }
+  
