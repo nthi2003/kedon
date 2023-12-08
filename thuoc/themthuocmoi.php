@@ -57,15 +57,15 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
       </div>
       <div class="f">
         <label for="doseMin">Liều lượng tối thiểu (viên):</label>
-        <input type="text" class="form-input" name="doseMin" placeholder="Ví dụ: 14">
+        <input type="text" class="form-input" name="doseMin" placeholder="Ví dụ: 5">
       </div>
       <div class="f">
         <label for="doseMax">Liều lượng tối đa (viên):</label>
-        <input type="text" class="form-input" name="doseMax" placeholder="Ví dụ: 20">
+        <input type="text" class="form-input" name="doseMax" placeholder="Ví dụ: 10">
       </div>
       <div class="f">
         <label for="frequency">Tần suất sử dụng (v/ngày):</label>
-        <input type="text" class="form-input" name="frequency" placeholder="Ví dụ: 6">
+        <input type="text" class="form-input" name="frequency" placeholder="Ví dụ: 1">
       </div>
       <div class="f">
         <label for="unit">Đơn vị (mg):</label>

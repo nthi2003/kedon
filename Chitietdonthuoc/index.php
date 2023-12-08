@@ -15,8 +15,8 @@
   <nav>
     <div class="nav-left-content">
       <a href="../index.php">Trang chủ</a>
-      <a href="../patient/new_patient.php">Thêm bệnh nhân</a>
-      <a href="../medicine/index.php">Thông tin thuốc</a>
+      <a href="../BenhNhan/BenhNhanMoi.php">Thêm bệnh nhân</a>
+      <a href="../thuoc/index.php">Thông tin thuốc</a>
       <a href="./index.php" style="background-color: gray;">Thông tin kê đơn</a>
     </div>
 
@@ -52,7 +52,7 @@
           echo "<td>" . $row['doseOnly'] . "</td>";
           echo "<td>" . $row['doseDay'] . "</td>";
           echo "<td>" . $row['frequency'] . "</td>";
-          echo "<td><a href='./delete_prescription_detail.php?id=" . $row['id'] . "' class='a_xoa'>Xóa</a></td>";
+          echo "<td><a href='./xoa.php?id=" . $row['id'] . "' class='a_xoa'>Xóa</a></td>";
           echo "</tr>";
         }
       } else {

@@ -30,7 +30,7 @@ function check($id)
       var selectedValue = selectElement.options[selectElement.selectedIndex].value;
       console.log("f:" + selectedValue);
       // Gửi giá trị đến PHP bằng Ajax
-      window.location.href = 'new_prescription_detail.php?prescriptionId=0&patientId=' + selectedValue;
+      window.location.href = 'moi.php?prescriptionId=0&patientId=' + selectedValue;
     }
   </script>
   <header>

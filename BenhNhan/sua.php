@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['patientId'])) {
   WHERE BenhNhanId = $patientId";
   if ($conn->query($update_sql) === TRUE) {
     echo '<script>alert("Thông tin bệnh nhân đã được cập nhật thành công.");';
-    echo 'setTimeout(function() { window.location.href = "./index.php"; }, 500);</script>';
+    echo 'setTimeout(function() { window.location.href = "./BenhNhanMoi.php"; }, 500);</script>';
     mysqli_close($conn);
     exit();
   } else {

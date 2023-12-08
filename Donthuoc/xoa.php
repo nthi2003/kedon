@@ -1,10 +1,9 @@
 <?php
 require_once '../connection/connect.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['prescriptionId'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['prescriptionId'])) { // kiểm tra id dơn thuốc
   $prescriptionId = $_GET['prescriptionId'];
 
-  // Thay đổi tên bảng từ 'prescription' thành 'donthuoc'
   $delete_sql = "DELETE FROM donthuoc WHERE DonThuocId = $prescriptionId";
 
   if ($conn->query($delete_sql) === TRUE) {

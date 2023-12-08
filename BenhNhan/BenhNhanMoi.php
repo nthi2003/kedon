@@ -19,8 +19,8 @@ require_once '../connection/connect.php';
   <nav>
     <div class="nav-left-content">
       <a href="../index.php">Trang chủ</a>
-      <a href="./new_patient.php" style="background-color: gray;">Thêm bệnh nhân</a>
-      <a href="../medicine/index.php">Thông tin thuốc</a>
+      <a href="./BenhNhanMoi.php" style="background-color: gray;">Thêm bệnh nhân</a>
+      <a href="../thuoc/index.php">Thông tin thuốc</a>
       <a href="../prescription-detail/index.php">Thông tin kê đơn</a>
     </div>
 
@@ -80,7 +80,7 @@ require_once '../connection/connect.php';
               echo "<td>" . $row['TenBenhNhan'] . "</td>";
               echo "<td>" . $row['gioitinh'] . "</td>";
               echo "<td>" . $row['phone'] . "</td>";
-              echo "<td><a href='./edit_patient.php?patientId=" . $row['BenhNhanId'] . "' class='a_sua'>Sửa</a>  <a href='./delete_patient.php?patientId=" . $row['BenhNhanId'] . "' class='a_xoa'>Xóa</a></td>";
+              echo "<td><a href='./sua.php?patientId=" . $row['BenhNhanId'] . "' class='a_sua'>Sửa</a>  <a href='./xoa.php?patientId=" . $row['BenhNhanId'] . "' class='a_xoa'>Xóa</a></td>";
               echo "</tr>";
             }
           } else {
@@ -98,7 +98,7 @@ require_once '../connection/connect.php';
               echo "<td>" . $row['TenBenhNhan'] . "</td>";
               echo "<td>" . $row['gioitinh'] . "</td>";
               echo "<td>" . $row['phone'] . "</td>";
-              echo "<td><a href='./edit_patient.php?patientId=" . $row['BenhNhanId'] . "' class='a_sua'>Sửa</a>  <a href='./delete_patient.php?patientId=" . $row['BenhNhanId'] . "' class='a_xoa'>Xóa</a></td>";
+              echo "<td><a href='./sua.php?patientId=" . $row['BenhNhanId'] . "' class='a_sua'>Sửa</a>  <a href='./xoa.php?patientId=" . $row['BenhNhanId'] . "' class='a_xoa'>Xóa</a></td>";
               echo "</tr>";
             }
           } else {

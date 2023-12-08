@@ -32,7 +32,7 @@ function checkDose($conn, $medicine, $dose_only, $dose_day, $day)
         }
         return true;
     } else {
-        echo "Không tìm thấy thuốc với ID = $medicine";
+        echo "chưa nhập thuốc ";
         return false;
     }
 }
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($result) {
                 echo '<script>alert("Thông tin kê đơn đã được lưu thành công.");';
-                echo 'setTimeout(function() { window.location.href = "./prescription-detail/index.php"; }, 500);</script>';
+                echo 'setTimeout(function() { window.location.href = "./Chitietdonthuoc/index.php"; }, 500);</script>';
                 mysqli_close($conn);
                 exit();
             } else {

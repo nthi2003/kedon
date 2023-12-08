@@ -2,10 +2,12 @@
 require_once '../connection/connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['medicineId'])) {
+  //kiểm tra xem mã thuốc có chưa tham số hay ko 
   $medicineId = $_GET['medicineId'];
+
   $sql = "SELECT * FROM thuoc WHERE thuocId = $medicineId";
   $result = mysqli_query($conn, $sql);
-
+  // kiểm tra nếu có mã thuốc thì tiếp tục còn nếu không có thì kết thúc
   if ($result && mysqli_num_rows($result) > 0) {
     $medicine_data = mysqli_fetch_assoc($result);
   } else {
@@ -18,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['medicineId'])) {
   $updated_doseMin = $_POST['dosemin'];
   $updated_doseMax = $_POST['dosemax'];
   $updated_frequence = $_POST['frequence'];
-  $updated_unit = mysqli_real_escape_string($conn, $_POST['unit']);
+  $updated_unit = mysqli_real_escape_string($conn, $_POST['unit']); //bảo về trg dữ liệu 
 
   $update_sql = "UPDATE thuoc
-                   SET tenThuoc = '$updated_name', lieuToiThieu = $updated_doseMin, LieuToiDa = $updated_doseMax, TanXuat = $updated_frequence, Donvi = '$updated_unit'
+                   SET tenThuoc = '$updated_name', lieuToiThieu = '$updated_doseMin', LieuToiDa = '$updated_doseMax', TanXuat = '$updated_frequence', Donvi = '$updated_unit'
                    WHERE thuocId = $medicineId";
 
   if ($conn->query($update_sql) === TRUE) {

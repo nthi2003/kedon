@@ -15,7 +15,7 @@
   <nav>
     <div class="nav-left-content">
       <a href="../index.php">Trang chủ</a>
-      <a href="../patient/new_patient.php">Thêm bệnh nhân</a>
+      <a href="../BenhNhan/BenhNhanMoi.php">Thêm bệnh nhân</a>
       <a href="./index.php" style="background-color: gray;">Thông tin thuốc</a>
       <a href="../prescription-detail/index.php">Thông tin kê đơn</a>
     </div>
@@ -33,7 +33,7 @@
       </form>
     </div>
     <div class="new-patient-button">
-      <a href="./new_medicine.php">Thêm thuốc</a>
+      <a href="./themthuocmoi.php">Thêm thuốc</a>
     </div>
     <table>
       <tr class="th">
@@ -53,11 +53,12 @@
         $check = true;
         $searchName = $_POST['search'];
         if ($check) {
-          $sql = "SELECT * FROM thuoc WHERE tenThuoc LIKE '%$searchName%'";
+          $sql = "SELECT * FROM thuoc WHERE tenThuoc LIKE '%$searchName%'"; //tìm kiếm
           $result = mysqli_query($conn, $sql);
         }
       } else {
-        $sql = "SELECT * FROM thuoc ORDER BY thuocId";
+        $sql = "SELECT * FROM thuoc ORDER BY thuocId"; // sắp xêp tăng dần
+
         $result = mysqli_query($conn, $sql);
       }
 
@@ -70,7 +71,7 @@
           echo "<td>" . $row['LieuToiDa'] . "</td>";
           echo "<td>" . $row['TanXuat'] . "</td>";
           echo "<td>" . $row['Donvi'] . "</td>";
-          echo "<td><a href='./edit_medicine.php?medicineId=" . $row['thuocId'] . "' class='a_sua'>Sửa</a>  <a href='./delete_medicine.php?medicineId=" . $row['thuocId'] . "' class='a_xoa'>Xóa</a></td>";
+          echo "<td><a href='./sua.php?medicineId=" . $row['thuocId'] . "' class='a_sua'>Sửa</a>  <a href='./xoathuoc.php?medicineId=" . $row['thuocId'] . "' class='a_xoa'>Xóa</a></td>";
           echo "</tr>";
         }
       } else {

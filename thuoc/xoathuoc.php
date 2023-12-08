@@ -2,6 +2,7 @@
 require_once '../connection/connect.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['thuocId'])) {
+  // kiểm tra phương thức get và kiểm tra có nằm trong chuỗi truy vấn 
   $thuocId = $_GET['thuocId'];
   $delete_sql = "DELETE FROM thuoc WHERE thuocId = $thuocId";
 

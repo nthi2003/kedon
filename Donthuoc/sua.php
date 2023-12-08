@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['prescriptionId'])) {
   $prescriptionId = $_POST['prescriptionId'];
   $updated_doctorId = $_POST['doctor'];
 
-  // Sanitize input to prevent SQL injection
   $prescriptionId = mysqli_real_escape_string($conn, $prescriptionId);
   $updated_doctorId = mysqli_real_escape_string($conn, $updated_doctorId);
 

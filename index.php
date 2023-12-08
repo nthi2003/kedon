@@ -16,15 +16,15 @@
   <nav>
     <div class="nav-left-content">
       <a href="./index.php" style="background-color: gray;">Trang chủ</a>
-      <a href="./patient/new_patient.php">Thêm bệnh nhân</a>
-      <a href="./medicine/index.php">Thông tin thuốc</a>
-      <a href="./prescription-detail/index.php">Thông tin kê đơn</a>
+      <a href="./BenhNhan/BenhNhanMoi.php">Thêm bệnh nhân</a>
+      <a href="./thuoc/index.php">Thông tin thuốc</a>
+      <a href="./Chitietdonthuoc/index.php">Thông tin kê đơn</a>
     </div>
   </nav>
   <div class="content">
     <h2>Danh sách đơn thuốc</h2>
     <div class="new-patient-button">
-      <a href="./prescription/new_prescription.php">Thêm đơn thuốc</a>
+      <a href="./Donthuoc/donthuocmoi.php">Thêm đơn thuốc</a>
     </div>
     <table>
       <tr class="th">
@@ -54,7 +54,7 @@
           echo "<td>" . $row['TenBS'] . "</td>";
           echo "<td>" . strstr($row['NgayBatdau'], ' ', true) . "</td>";
           echo "<td>" . strstr($row['NgayKetThuc'], ' ', true) . "</td>";
-          echo "<td><a href='./prescription-detail/new_prescription_detail.php?prescriptionId=" . $row['DonThuocId'] . "' class='a_kedon'>Kê đơn</a> <a href='./prescription/edit_prescription.php?prescriptionId=" . $row['DonThuocId'] . "' class='a_sua'>Sửa</a> <a href='./prescription/delete_prescription.php?prescriptionId=" . $row['DonThuocId'] . "' class='a_xoa'>Xóa</a></td>";
+          echo "<td><a href='./Chitietdonthuoc/moi.php?prescriptionId=" . $row['DonThuocId'] . "' class='a_kedon'>Kê đơn</a> <a href='./Donthuoc/sua.php?prescriptionId=" . $row['DonThuocId'] . "' class='a_sua'>Sửa</a> <a href='./Donthuoc/xoa.php?prescriptionId=" . $row['DonThuocId'] . "' class='a_xoa'>Xóa</a></td>";
           echo "</tr>";
         }
       } else {
