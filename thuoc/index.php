@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thông tin thuốc</title>
   <link rel="stylesheet" href="../style_light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
       <a href="../index.php">Trang chủ</a>
       <a href="../BenhNhan/BenhNhanMoi.php">Thêm bệnh nhân</a>
       <a href="./index.php" style="background-color: gray;">Thông tin thuốc</a>
-      <a href="../prescription-detail/index.php">Thông tin kê đơn</a>
+      <a href="../Chitietdonthuoc/index.php">Thông tin kê đơn</a>
     </div>
 
   </nav>
@@ -28,7 +29,7 @@
         <input type="hidden" name="form_type" value="form2">
         <input type="text" class="searchBox-input" name="search" placeholder="Tìm kiếm theo tên thuốc">
         <button type="submit" class="searchBox-button">
-          <img src="../img/search-icon.svg" alt="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
     </div>
